@@ -1,0 +1,6 @@
+#!name=Remove Weibo Ads
+#!desc=屏蔽新浪微博广告(2020.11.15)
+
+[Script]
+http-response ^https?:\/\/(api|mapi)\.weibo\.(cn|com)\/2(\/groups\/timeline|\/statuses\/unread|\/statuses\/extend|\/comments\/build_comments|\/photo\/recommend_list|\/stories\/video_stream|\/statuses\/positives\/get|\/stories\/home_list|\/profile\/statuses|\/statuses\/friends\/timeline|\/service\/picfeed) requires-body=true,script-path=https://ruleset.dev/wb_ad,script-update-interval=86400
+http-response ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(\/interface\/sdk\/sdkad.php|\/wbapplua\/wbpullad.lua) requires-body=true,script-path=https://ruleset.dev/wb_launch,script-update-interval=86400
