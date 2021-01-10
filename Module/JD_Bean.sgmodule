@@ -26,6 +26,7 @@
 京东抽奖机 = type=cron, cronexp=5 0 * * *, wake-system=1, timeout=1200, script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, script-update-interval=0
 京东赚赚 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=20, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js
 # 京东注销店铺会员卡 = type=cron, cronexp="55 23 * * *", wake-system=1, timeout=620, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unbind.js
+京东口袋书店 = type=cron, cronexp="0 8, 12, 18 * * *", wake-system=1, timeout=1120, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bookshop.js
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
