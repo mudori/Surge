@@ -3,8 +3,6 @@
 #!system=ios
 
 [Script]
-东东农场 = type=cron, cronexp="40 8-18/5 * * *", wake-system=1, timeout=200, enable=true, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_fruit.js
-东东萌宠 = type=cron, cronexp="20 8-18/5 * * *", wake-system=1, timeout=200, enable=true, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_pet.js
 汽车兑换 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=2000, enable=true, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js
 种豆得豆 = type=cron, cronexp="10 7-21/2 * * *", wake-system=1, timeout=630, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_plantBean.js
 宠汪汪 = type=cron, cronexp="15 */2 * * *", wake-system=1, timeout=320, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy.js
