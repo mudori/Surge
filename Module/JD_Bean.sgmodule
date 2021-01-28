@@ -35,7 +35,7 @@
 炸年兽 = type=cron, cronexp="0 8,9,10 * * *", wake-system=1, timeout=30000, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nian.js
 收爆竹 = type=cron, cronexp="19 * * * *", wake-system=1, timeout=300, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nianCollect.js
 神仙书院 = type=cron, cronexp="0 8 * * *", wake-system=1, timeout=3000, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_immortal.js
-源头好物红包 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=4000, script-path=hhttps://gitee.com/lxk0301/jd_scripts/raw/master/jd_coupon.js
+源头好物红包 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=4000, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_coupon.js
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
