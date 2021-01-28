@@ -3,39 +3,39 @@
 #!system=ios
 
 [Script]
-汽车兑换 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=2000, enable=true, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_car_exchange.js
-种豆得豆 = type=cron, cronexp="10 7-21/2 * * *", wake-system=1, timeout=630, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_plantBean.js
-宠汪汪 = type=cron, cronexp="15 */2 * * *", wake-system=1, timeout=320, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy.js
-宠汪汪喂食 = type=cron, cronexp="12 */1 * * *", wake-system=1, timeout=30, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy_feedPets.js
-宠汪汪积分兑换奖品 = type=cron, cronexp="1 0,8,12,16 * * *", wake-system=1, timeout=30, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy_reward.js
-摇钱树 = type=cron, cronexp="15 */5 * * *", wake-system=1, timeout=130, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_moneyTree.js
-摇京豆 = type=cron, cronexp="5 0 * * *", wake-system=1, timeout=50, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_club_lottery.js
-京小超 = type=cron, cronexp="11 1-23/5 * * *", wake-system=1, timeout=530, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_superMarket.js
-京小超领蓝币兑换京豆 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=30, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_blueCoin.js
-进店领豆 = type=cron, cronexp="10 0 * * *", wake-system=1, timeout=50, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_shop.js
-点点券 = type=cron, cronexp="30 0,20 * * *", wake-system=1, timeout=650, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_necklace.js
-全民开红包 = type=cron, cronexp="1 1 * * *", wake-system=1, timeout=150, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_redPacket.js
-京豆变动通知 = type=cron, cronexp="0 7 * * *", wake-system=1, timeout=650, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_bean_change.js
-取关京东店铺商品 = type=cron, cronexp="30 6 * * *", wake-system=1, timeout=250, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unsubscribe.js
-京东汽车 = type=cron, cronexp="10 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_car.js
-领京豆额外奖励 = type=cron, cronexp="7 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_bean_home.js
-京喜工厂 = type=cron, cronexp="10 * * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_dreamFactory.js
-东东小窝 = type=cron, cronexp="10 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_small_home.js
-十元街 = type=cron, cronexp="30 8 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_syj.js
+汽车兑换 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=2000, enable=true, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_car_exchange.js
+种豆得豆 = type=cron, cronexp="10 7-21/2 * * *", wake-system=1, timeout=630, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_plantBean.js
+宠汪汪 = type=cron, cronexp="15 */2 * * *", wake-system=1, timeout=320, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_joy.js
+宠汪汪喂食 = type=cron, cronexp="12 */1 * * *", wake-system=1, timeout=30, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_joy_feedPets.js
+宠汪汪积分兑换奖品 = type=cron, cronexp="1 0,8,12,16 * * *", wake-system=1, timeout=30, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_joy_reward.js
+摇钱树 = type=cron, cronexp="15 */5 * * *", wake-system=1, timeout=130, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_moneyTree.js
+摇京豆 = type=cron, cronexp="5 0 * * *", wake-system=1, timeout=50, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_club_lottery.js
+京小超 = type=cron, cronexp="11 1-23/5 * * *", wake-system=1, timeout=530, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_superMarket.js
+京小超领蓝币兑换京豆 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=30, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_blueCoin.js
+进店领豆 = type=cron, cronexp="10 0 * * *", wake-system=1, timeout=50, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_shop.js
+点点券 = type=cron, cronexp="30 0,20 * * *", wake-system=1, timeout=650, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_necklace.js
+全民开红包 = type=cron, cronexp="1 1 * * *", wake-system=1, timeout=150, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_redPacket.js
+京豆变动通知 = type=cron, cronexp="0 7 * * *", wake-system=1, timeout=650, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_bean_change.js
+取关京东店铺商品 = type=cron, cronexp="30 6 * * *", wake-system=1, timeout=250, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_unsubscribe.js
+京东汽车 = type=cron, cronexp="10 7 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_car.js
+领京豆额外奖励 = type=cron, cronexp="7 7 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_bean_home.js
+京喜工厂 = type=cron, cronexp="10 * * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_dreamFactory.js
+东东小窝 = type=cron, cronexp="10 7 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_small_home.js
+十元街 = type=cron, cronexp="30 8 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_syj.js
 抽奖机 = type=cron, cronexp=5 0 * * *, wake-system=1, timeout=1200, script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, script-update-interval=0
-京东赚赚 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_jdzz.js
-京东直播 = type=cron, cronexp="10 12 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_live.js
-# 注销店铺会员卡 = type=cron, cronexp="55 23 * * *", wake-system=1, timeout=620, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unbind.js
-口袋书店 = type=cron, cronexp="0 8, 12, 18 * * *", wake-system=1, timeout=1120, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_bookshop.js
-签到领现金 = type=cron, cronexp="0 2 * * *", wake-system=1, timeout=80, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_cash.js
-京喜签到 = type=cron, cronexp="2 0 * * *", wake-system=1, timeout=100, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jx_sign.js
-年货节 = type=cron, cronexp="0 7 * * *", wake-system=1, timeout=1600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nh.js
-家庭号 = type=cron, cronexp="1 * * * *", wake-system=1, timeout=2250, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_family.js
-疯狂的joy日常任务 = type=cron, cronexp="30 8 * * *", wake-system=1, timeout=2250, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_crazy_joy.js
-炸年兽 = type=cron, cronexp="0 8,9,10 * * *", wake-system=1, timeout=30000, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nian.js
-收爆竹 = type=cron, cronexp="19 * * * *", wake-system=1, timeout=300, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_nianCollect.js
-神仙书院 = type=cron, cronexp="0 8 * * *", wake-system=1, timeout=3000, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_immortal.js
-源头好物红包 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=4000, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_coupon.js
+京东赚赚 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_jdzz.js
+京东直播 = type=cron, cronexp="10 12 * * *", wake-system=1, timeout=600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_live.js
+# 注销店铺会员卡 = type=cron, cronexp="55 23 * * *", wake-system=1, timeout=620, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_unbind.js
+口袋书店 = type=cron, cronexp="0 8, 12, 18 * * *", wake-system=1, timeout=1120, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_bookshop.js
+签到领现金 = type=cron, cronexp="0 2 * * *", wake-system=1, timeout=80, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_cash.js
+京喜签到 = type=cron, cronexp="2 0 * * *", wake-system=1, timeout=100, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jx_sign.js
+年货节 = type=cron, cronexp="0 7 * * *", wake-system=1, timeout=1600, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_nh.js
+家庭号 = type=cron, cronexp="1 * * * *", wake-system=1, timeout=2250, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_family.js
+疯狂的joy日常任务 = type=cron, cronexp="30 8 * * *", wake-system=1, timeout=2250, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_crazy_joy.js
+炸年兽 = type=cron, cronexp="0 8,9,10 * * *", wake-system=1, timeout=30000, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_nian.js
+收爆竹 = type=cron, cronexp="19 * * * *", wake-system=1, timeout=300, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_nianCollect.js
+神仙书院 = type=cron, cronexp="0 8 * * *", wake-system=1, timeout=3000, script-path=https://gitee.com/lxk0301/jd_scripts/raw/jd_scripts/master/jd_immortal.js
+源头好物红包 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=4000, script-path=https://raw.githubusercontent.com/mudori/Surge/Script/jd_coupon.js
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
