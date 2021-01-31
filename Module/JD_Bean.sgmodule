@@ -37,6 +37,7 @@
 神仙书院 = type=cron, cronexp="0 8 * * *", wake-system=1, timeout=3000, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_immortal.js
 源头好物红包 = type=cron, cronexp="0 0 * * *", wake-system=1, timeout=4000, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_coupon.js
 5G狂欢城 = type=cron, cronexp="0 0,6,12,18 * * *", wake-system=1, timeout=4000, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_5g.js
+小鸽有礼2 = type=cron, cronexp="30 7 * * *", wake-system=1, timeout=4000, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xgyl.js
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
