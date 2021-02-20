@@ -54,7 +54,7 @@ crazyJoy任务 = type=cron,cronexp="5 7 * * *",wake-system=1,timeout=3600,script
 京喜签到 = type=cron,cronexp="2 0 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jx_sign.js
 # 小米运动 = type=cron,cronexp="10 17 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/backUp/xmSports.js
 # 小米运动获取Token = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/backUp/xmSports.js
-京东价格保护 = type=cron,cronexp="0 9 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_priceProtect.js,script-update-interval=0
+京东价格保护 = type=cron,cronexp="0 9 * * *",wake-system=1,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_price.js
 
 [MITM]
 hostname = %APPEND% wq.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, wq.jd.com
