@@ -50,6 +50,8 @@ crazyJoy任务 = type=cron,cronexp="5 7 * * *",wake-system=1,timeout=3600,script
 # 小米运动 = type=cron,cronexp="10 17 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/backUp/xmSports.js
 # 小米运动获取Token = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/backUp/xmSports.js
 京东价格保护 = type=cron,cronexp="0 9 * * *",wake-system=1,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_price.js
+京东极速版 = type=cron,cronexp="0 7 * * *",wake-system=1,timeout=3600，script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_speed_sign.js
+京东极速版红包 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600，script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_speed_redpocke.js
 
 [MITM]
-hostname = %APPEND% api.m.jd.com
+hostname = %APPEND% wq.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com
