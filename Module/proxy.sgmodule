@@ -3,6 +3,7 @@
 #!system=ios
 
 [Rule]
+RULE-SET,SYSTEM,PROXY
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Apple.list,PROXY
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Microsoft.list,PROXY
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Google.list,PROXY

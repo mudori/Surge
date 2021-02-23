@@ -3,6 +3,7 @@
 #!system=ios
 
 [Rule]
+RULE-SET,SYSTEM,DIRECT
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Apple.list,DIRECT
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Microsoft.list,DIRECT
 
