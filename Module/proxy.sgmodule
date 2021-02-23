@@ -1,6 +1,5 @@
 #!name=Proxy
 #!desc=代理模块
-#!system=ios
 
 [Rule]
 RULE-SET,SYSTEM,PROXY
