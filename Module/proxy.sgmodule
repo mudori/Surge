@@ -1,0 +1,13 @@
+#!name=Proxy
+#!desc=代理模块
+#!system=ios
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Apple.list,PROXY
+RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Microsoft.list,PROXY
+RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Google.list,PROXY
+RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Youtube.list,PROXY
+
+[Script]
+
+[MITM]

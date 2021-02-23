@@ -1,0 +1,11 @@
+#!name=Direct
+#!desc=直连模块
+#!system=ios
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Apple.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Microsoft.list,DIRECT
+
+[Script]
+
+[MITM]
