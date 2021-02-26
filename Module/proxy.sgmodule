@@ -3,6 +3,9 @@
 
 [Rule]
 DOMAIN,time.apple.com,DIRECT
+DOMAIN,time-macos.apple.com,DIRECT
+DOMAIN,news.iadsdk.apple.com,REJECT
+DOMAIN,iadsdk.apple.com,REJECT
 RULE-SET,SYSTEM,PROXY
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Apple.list,PROXY
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Microsoft.list,PROXY
