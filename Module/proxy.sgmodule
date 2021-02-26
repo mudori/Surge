@@ -2,36 +2,7 @@
 #!desc=代理模块
 
 [Rule]
-# 连接Apple OCSP服务，验证macOS app
-PROCESS-NAME,trustd,REJECT
-# 屏蔽macOS更新
-PROCESS-NAME,softwareupdated,REJECT
-PROCESS-NAME,SoftwareUpdateNotificationManager,REJECT
-DOMAIN-SUFFIX,swscan.apple.com,REJECT
-DOMAIN-SUFFIX,swcdn.apple.com,REJECT
-DOMAIN-SUFFIX,swdist.apple.com,REJECT
-# UDP
-DOMAIN,time.apple.com,DIRECT
-DOMAIN,time-macos.apple.com,DIRECT
-# Apple Ads
-DOMAIN,metrics.apple.com,REJECT
-DOMAIN,advertising.apple.com,REJECT
-DOMAIN,banners.itunes.apple.com,REJECT
-DOMAIN,ca.iadsdk.apple.com,REJECT
-DOMAIN,cf.iadsdk.apple.com,REJECT
-DOMAIN,cs.iadsdk.apple.com,REJECT
-DOMAIN,iadmoo.apple.com,REJECT
-DOMAIN,su.iadsdk.apple.com,REJECT
-DOMAIN,tr.iadsdk.apple.com,REJECT
-DOMAIN,ut.iadsdk.apple.com,REJECT
-DOMAIN,securemetrics.apple.com,REJECT
-DOMAIN,iadcontent.apple.com,REJECT
-DOMAIN,news.iadsdk.apple.com,REJECT
-DOMAIN,iadsdk.apple.com,REJECT
-DOMAIN,apple.comscoreresearch.com,REJECT
 
-RULE-SET,SYSTEM,PROXY
-RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Apple.list,PROXY
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Microsoft.list,PROXY
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Google.list,PROXY
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Youtube.list,PROXY

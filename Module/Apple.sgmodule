@@ -2,8 +2,9 @@
 #!desc=Apple自定义规则
 
 [Rule]
-# 拒绝连接Apple OCSP服务，验证macOS app
+# 拒绝Apple OCSP服务
 PROCESS-NAME,trustd,REJECT
+USER-AGENT,com.apple.trustd,REJECT
 # 屏蔽macOS更新
 PROCESS-NAME,softwareupdated,REJECT
 PROCESS-NAME,SoftwareUpdateNotificationManager,REJECT
