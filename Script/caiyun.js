@@ -73,13 +73,13 @@ if (typeof $request !== "undefined") {
   if (!$.read("location")) {
     $.notify("[彩云天气]", "", "🎉🎉🎉 获取定位成功。");
   }
-  if (display_location === undefined) {
+  if (display_location) {
     $.notify(
-      `成功：纬度 ${location.latitude} 经度 ${location.longitude}`
+      `获取定位信息失败`
     );
   } else {
     $.notify(
-      `失败：纬度 ${location.latitude} 经度 ${location.longitude}`
+      `纬度:${location.latitude}, 经度:${location.longitude}`
     ); 
   }
 
