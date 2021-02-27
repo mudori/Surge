@@ -3,6 +3,10 @@
 
 [Rule]
 DOMAIN,gs-loc.apple.com,DIRECT
+USER-AGENT,geod*,DIRECT
+USER-AGENT,locationd*,DIRECT
+USER-AGENT,Weather*,DIRECT
+USER-AGENT,geod*,DIRECT
 # 拒绝Apple OCSP服务
 PROCESS-NAME,trustd,REJECT
 USER-AGENT,com.apple.trustd,REJECT
