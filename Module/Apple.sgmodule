@@ -11,6 +11,7 @@ USER-AGENT,geod*,DIRECT
 USER-AGENT,locationd*,DIRECT
 USER-AGENT,Weather*,DIRECT
 USER-AGENT,geod*,DIRECT
+DOMAIN,weather-data.apple.com,DIRECT
 # 拒绝Apple OCSP服务
 PROCESS-NAME,trustd,REJECT
 USER-AGENT,com.apple.trustd,REJECT
@@ -43,7 +44,7 @@ DOMAIN,securemetrics.apple.com,REJECT
 DOMAIN,iadcontent.apple.com,REJECT
 DOMAIN,news.iadsdk.apple.com,REJECT
 DOMAIN,iadsdk.apple.com,REJECT
-DOMAIN,apple.comscoreresearch.com,REJECT
+#DOMAIN,apple.comscoreresearch.com,REJECT
 # 系统服务
 RULE-SET,SYSTEM,PROXY
 # Apple常用域名
