@@ -77,6 +77,10 @@ if (typeof $request !== "undefined") {
     $.notify(
       `成功获取当前位置：纬度 ${location.latitude} 经度 ${location.longitude}`
     );
+  } else {
+    $.notify(
+      `未获取当前位置：纬度 ${location.latitude} 经度 ${location.longitude}`
+    ); 
   }
 
   $.write(res[1], "#latitude");
