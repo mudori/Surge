@@ -3,8 +3,8 @@
 
 [Rule]
 # Mail
-DOMAIN-SUFFIX,mail.me.com,DIRECT
-OMAIN-SUFFIX,mail.icloud.com.cn,DIRECT
+DOMAIN,mail.me.com,DIRECT
+DOMAIN,mail.icloud.com.cn,DIRECT
 # 基于地理位置的服务    
 DOMAIN,gs-loc.apple.com,DIRECT
 USER-AGENT,geod*,DIRECT
