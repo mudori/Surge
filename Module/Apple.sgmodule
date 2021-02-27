@@ -44,7 +44,7 @@ DOMAIN,securemetrics.apple.com,REJECT
 DOMAIN,iadcontent.apple.com,REJECT
 DOMAIN,news.iadsdk.apple.com,REJECT
 DOMAIN,iadsdk.apple.com,REJECT
-#DOMAIN,apple.comscoreresearch.com,REJECT
+DOMAIN,apple.comscoreresearch.com,REJECT
 # 系统服务
 RULE-SET,SYSTEM,PROXY
 # Apple常用域名
