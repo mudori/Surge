@@ -1,9 +1,9 @@
-# > Apple API
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,appsto.re
+DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,icloud.com
@@ -11,7 +11,10 @@ DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-KEYWORD,apple.com.akadns.net
+DOMAIN-KEYWORD,icloud.com.akadns.net
 DOMAIN,www-cdn.icloud.com.akadns.net
+DOMAIN,itunes-apple.com.akadns.net
 IP-CIDR,17.0.0.0/8,no-resolve
 IP-CIDR,63.92.224.0/19,no-resolve
 IP-CIDR,65.199.22.0/23,no-resolve
@@ -23,12 +26,14 @@ IP-CIDR,192.35.50.0/24,no-resolve
 IP-CIDR,198.183.17.0/24,no-resolve
 IP-CIDR,205.180.175.0/24,no-resolve
 
-# > Apple News and Apple Map TOMTOM Version
-DOMAIN,gspe1-ssl.ls.apple.com
 PROCESS-NAME,News
 USER-AGENT,AppleNews*
 USER-AGENT,com.apple.news*
 DOMAIN-SUFFIX,apple.news
-DOMAIN,news-client.apple.com
-DOMAIN,news-edge.apple.com
-DOMAIN,news-events.apple.com
+
+PROCESS-NAME,Music
+USER-AGENT,Music*
+
+PROCESS-NAME,TV
+USER-AGENT,AppleTV*
+USER-AGENT,com.apple.tv*

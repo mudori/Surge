@@ -2,6 +2,10 @@
 #!desc=Apple自定义规则
 
 [Rule]
+# Mail
+DOMAIN-SUFFIX,mail.me.com,DIRECT
+OMAIN-SUFFIX,mail.icloud.com.cn,DIRECT
+# 基于地理位置的服务    
 DOMAIN,gs-loc.apple.com,DIRECT
 USER-AGENT,geod*,DIRECT
 USER-AGENT,locationd*,DIRECT
@@ -10,6 +14,11 @@ USER-AGENT,geod*,DIRECT
 # 拒绝Apple OCSP服务
 PROCESS-NAME,trustd,REJECT
 USER-AGENT,com.apple.trustd,REJECT
+# 屏蔽iOS更新
+#DOMAIN,mesu.apple.com,REJECT
+#DOMAIN,gdmf.apple.com,REJECT
+#DOMAIN,updates-http.cdn-apple.com,REJECT
+#DOMAIN,xp.apple.com,REJECT
 # 屏蔽macOS更新
 PROCESS-NAME,softwareupdated,REJECT
 PROCESS-NAME,SoftwareUpdateNotificationManager,REJECT
