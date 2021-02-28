@@ -74,7 +74,7 @@ if (typeof $request !== "undefined") {
     $.notify("[彩云天气]", "", "🎉🎉🎉 获取定位成功。");
   }
   if (display_location) {
-    $.info(
+    $.notify(
       `纬度:${location.latitude}, 经度:${location.longitude}`
     );
   // } else {
