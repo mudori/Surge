@@ -1,6 +1,12 @@
 #!name=彩云天气
 #!desc=使用个人版彩云token
 
+[Rule]
+DOMAIN,ad.caiyunapp.com,REJECT
+URL-REGEX,^http:\/\/caiyunapp.com\/\/fcgi-bin\/v1\/subscribe.py,REJECT
+DOMAIN,applog.uc.cn,REJECT
+DOMAIN-SUFFIX,mob.com,REJECT
+
 [Script]
 彩云天气定时更新 = type=cron,cronexp="0 6-23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/caiyun.js
 彩云天气 = type=http-request,pattern=https:\/\/((weather-data\.apple)|(api.weather))\.com,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/caiyun.js, require-body=false

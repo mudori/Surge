@@ -75,11 +75,11 @@ if (typeof $request !== "undefined") {
   }
   if (display_location) {
     $.notify(
-      `获取定位信息失败`
+      `1. 纬度:${location.latitude}, 经度:${location.longitude}`
     );
   } else {
     $.notify(
-      `纬度:${location.latitude}, 经度:${location.longitude}`
+      `2. 纬度:${location.latitude}, 经度:${location.longitude}`
     ); 
   }
 
