@@ -5,13 +5,7 @@
 # Mail
 DOMAIN,mail.me.com,DIRECT
 DOMAIN,mail.icloud.com.cn,DIRECT
-# 基于地理位置的服务    
-DOMAIN,gs-loc.apple.com,DIRECT
-USER-AGENT,geod*,DIRECT
-USER-AGENT,locationd*,DIRECT
-USER-AGENT,Weather*,DIRECT
-USER-AGENT,geod*,DIRECT
-DOMAIN,weather-data.apple.com,DIRECT
+
 # 拒绝Apple OCSP服务
 # PROCESS-NAME,trustd,REJECT
 # USER-AGENT,com.apple.trustd,REJECT
