@@ -77,10 +77,6 @@ if (typeof $request !== "undefined") {
     $.notify(
       `纬度:${location.latitude}, 经度:${location.longitude}`
     );
-  // } else {
-  //   $.notify(
-  //     `2. 纬度:${location.latitude}, 经度:${location.longitude}`
-  //   ); 
   }
 
   $.write(res[1], "#latitude");
