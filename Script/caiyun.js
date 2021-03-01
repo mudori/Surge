@@ -273,8 +273,7 @@ function realtimeWeather() {
       realtime.wind.direction
     )}
 
-${alertInfo}${hourlySkycon}
-`
+${alertInfo}${hourlySkycon}`
   );
 }
 
