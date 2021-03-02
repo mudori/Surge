@@ -1,5 +1,5 @@
 #!name=彩云天气
-#!desc=使用个人版彩云token
+#!desc=需申请个人彩云天气/腾讯地图API token
 
 [Rule]
 # DOMAIN,ad.caiyunapp.com,REJECT
