@@ -6,6 +6,7 @@
 DOMAIN,mail.me.com,DIRECT
 DOMAIN,mail.icloud.com.cn,DIRECT
 # Apple Pay
+USER-AGENT,Wallet*,DIRECT
 USER-AGENT,PassbookUIService*,DIRECT
 # 拒绝Apple OCSP服务
 # PROCESS-NAME,trustd,REJECT
