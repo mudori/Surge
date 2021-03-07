@@ -7,9 +7,9 @@ DOMAIN,mail.me.com,DIRECT
 DOMAIN,mail.icloud.com.cn,DIRECT
 # Apple Pay
 USER-AGENT,Wallet*,DIRECT
-USER-AGENT,passd,DIRECT
-USER-AGENT,seld,DIRECT
-USER-AGENT,nfcd,DIRECT
+USER-AGENT,passd*,DIRECT
+USER-AGENT,seld*,DIRECT
+USER-AGENT,nfcd*,DIRECT
 USER-AGENT,PassbookUIService*,DIRECT
 DOMAIN,nc-pod5-smp-device.apple.com,DIRECT
 DOMAIN,cn-apple-pay-gateway.apple.com,DIRECT
