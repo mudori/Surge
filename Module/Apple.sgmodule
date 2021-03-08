@@ -13,6 +13,12 @@ USER-AGENT,nfcd*,DIRECT
 USER-AGENT,PassbookUIService*,DIRECT
 DOMAIN,nc-pod5-smp-device.apple.com,DIRECT
 DOMAIN,cn-apple-pay-gateway.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-sh-pod1.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-sh-pod2.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-sh-pod3.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-tj-pod1.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-tj-pod2.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-tj-pod3.apple.com,DIRECT
 # 拒绝Apple OCSP服务
 # PROCESS-NAME,trustd,REJECT
 # USER-AGENT,com.apple.trustd,REJECT
