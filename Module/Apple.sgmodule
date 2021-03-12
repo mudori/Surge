@@ -35,6 +35,7 @@ DOMAIN-SUFFIX,swcdn.apple.com,REJECT
 DOMAIN-SUFFIX,swdist.apple.com,REJECT
 # 校时服务UDP
 DOMAIN,time.apple.com,DIRECT
+DOMAIN,time-ios.apple.com,DIRECT
 DOMAIN,time-macos.apple.com,DIRECT
 # 屏蔽Apple Ads
 DOMAIN,metrics.apple.com,REJECT
