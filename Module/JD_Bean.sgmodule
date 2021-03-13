@@ -60,4 +60,4 @@
 小米运动获取Token = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js
 
 [MITM]
-hostname = %APPEND% me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com
+hostname = %APPEND% api.m.jd.com, me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com
