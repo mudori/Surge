@@ -110,7 +110,7 @@ async function query() {
   // query API
   const url = `https://api.caiyunapp.com/v2.5/${$.read("token").caiyun}/${$.read("location").longitude
     },${$.read("location").latitude
-    }/weather?lang=zh_CN&dailystart=0&hourlysteps=384&dailysteps=16&alert=true&&unit=metric:v2`;
+    }/weather?lang=zh_CN&hourlysteps=120&dailysteps=5&alert=true&&unit=metric:v2`;
 
   $.log("Query weather...");
 
