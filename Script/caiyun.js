@@ -232,7 +232,7 @@ function realtimeWeather() {
 
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
-    `${mapSkycon(realtime.skycon)} ${realtime.temperature}℃  空气质量 ${realtime.air_quality.description.usa}`,
+    `${mapSkycon(realtime.skycon)} ${realtime.temperature}℃ (${daily.temperature[0].min}-${daily.temperature[0].max}℃)  空气质量 ${realtime.air_quality.description.usa}`,
     `💨 PM2.5浓度 ${realtime.air_quality.pm25}μg/m3  AQI ${realtime.air_quality.aqi.usa}
 🌡 体感 ${realtime.apparent_temperature}℃  湿度 ${(realtime.humidity * 100).toFixed(0)}%
 👀 能见度 ${realtime.visibility}km  降水 ${realtime.precipitation.local.intensity.toFixed(2)}mm/h
