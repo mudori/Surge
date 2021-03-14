@@ -237,7 +237,7 @@ function realtimeWeather() {
 🌡 温度 ${daily.temperature[0].min}-${daily.temperature[0].max}℃  湿度 ${(realtime.humidity * 100).toFixed(0)}%
 👀 能见度 ${realtime.visibility}km  降水 ${realtime.precipitation.local.intensity.toFixed(2)}mm/h
 🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)}
-[未来2小时降雨]
+[未来2小时降水]
 🔱 ${minutely.description}
 概率、强度/半小时 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}
 ${alertInfo}${dailySkycon}`
