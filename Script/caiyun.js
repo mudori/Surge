@@ -232,18 +232,18 @@ function realtimeWeather() {
 
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
-    `${mapSkycon(realtime.skycon)} ${realtime.temperature}℃ (${daily.temperature[0].min}-${daily.temperature[0].max}℃)  空气质量 ${realtime.air_quality.description.usa}`,
+    `${mapSkycon(realtime.skycon)} ${realtime.temperature}℃  空气质量 ${realtime.air_quality.description.usa}`,
     `💨 PM2.5浓度 ${realtime.air_quality.pm25}μg/m3  AQI ${realtime.air_quality.aqi.usa}
-🌡 体感 ${realtime.apparent_temperature}℃  湿度 ${(realtime.humidity * 100).toFixed(0)}%
+🌡 温度 ${daily.temperature[0].min}-${daily.temperature[0].max}℃  湿度 ${(realtime.humidity * 100).toFixed(0)}%
 👀 能见度 ${realtime.visibility}km  降水 ${realtime.precipitation.local.intensity.toFixed(2)}mm/h
 🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)}
-[未来2小时]
+[未来2小时降雨]
 🔱 ${minutely.description}
-降水概率/强度 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}
+概率、强度/半小时 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}
 ${alertInfo}${dailySkycon}`
   );
 }
-// 🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature}℃  💧 湿度 ${(realtime.humidity * 100).toFixed(0)}%
+// 🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature}℃
 // 📏 最近的降水带在${ realtime.precipitation.nearest.distance } 公里外呢
 // ${hourlySkycon}
 
