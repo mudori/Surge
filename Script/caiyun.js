@@ -271,7 +271,7 @@ function realtimeWeather() {
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)} ${realtime.temperature}℃  空气质量 ${realtime.air_quality.description.usa}`,
-    `PM2.5浓度 ${realtime.air_quality.pm25}μg/m3  AQI ${realtime.air_quality.aqi.usa}
+    `💨 PM2.5浓度 ${realtime.air_quality.pm25}μg/m3  AQI ${realtime.air_quality.aqi.usa}
 🌡 体感 ${realtime.apparent_temperature}℃  湿度 ${(realtime.humidity * 100).toFixed(0)}%
 👀 能见度 ${realtime.visibility}km  降水强度 ${realtime.precipitation.local.intensity}mm/h
 🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)}
