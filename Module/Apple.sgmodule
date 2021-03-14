@@ -28,11 +28,18 @@ DOMAIN,cn-apple-pay-gateway-tj-pod3.apple.com,DIRECT
 # DOMAIN,updates-http.cdn-apple.com,REJECT
 # DOMAIN,xp.apple.com,REJECT
 # 屏蔽macOS更新
-PROCESS-NAME,softwareupdated,REJECT
-PROCESS-NAME,SoftwareUpdateNotificationManager,REJECT
-DOMAIN-SUFFIX,swscan.apple.com,REJECT
-DOMAIN-SUFFIX,swcdn.apple.com,REJECT
-DOMAIN-SUFFIX,swdist.apple.com,REJECT
+# PROCESS-NAME,softwareupdated,REJECT
+# PROCESS-NAME,SoftwareUpdateNotificationManager,REJECT
+DOMAIN,gnf-mdn.apple.com,REJECT
+DOMAIN,gnf-mr.apple.com,REJECT
+DOMAIN,gs.apple.com,REJECT
+DOMAIN,ig.apple.com,REJECT
+DOMAIN,skl.apple.com,REJECT
+DOMAIN,swcdn.apple.com,REJECT
+DOMAIN,swdist.apple.com,REJECT
+DOMAIN,swdownload.apple.com,REJECT
+DOMAIN,swpost.apple.com,REJECT
+DOMAIN,swscan.apple.com,REJECT
 # 校时服务UDP
 DOMAIN,time.apple.com,DIRECT
 DOMAIN,time-ios.apple.com,DIRECT
