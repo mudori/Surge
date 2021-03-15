@@ -205,6 +205,7 @@ function realtimeWeather() {
   const minutely = data.minutely;
   const hourly = data.hourly;
   const daily = data.daily;
+  const keypoint = data.forecast_keypoint;
 
   // let hourlySkycon = "[未来4小时]\n";
   // for (let i = 0; i < 4; i++) {
@@ -229,20 +230,25 @@ function realtimeWeather() {
       (i == 2 ? "" : "\n");
   }
 
+  let twoHourProbability = "";
+  if (minutely.probability[0] != 0 || minutely.probability[1] != 0 || minutely.probability[2] != 0 || minutely.probability[3] != 0) {
+    twoHourProbability = `[未来2小时降水概率、强度/半小时]
+    ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}`;
+  } else {
+    twoHourProbability = `📎 ${keypoint}`;
+  }
 
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)} ${realtime.temperature}℃  空气质量 ${realtime.air_quality.description.usa}`,
     `😷 PM2.5浓度 ${realtime.air_quality.pm25}μg/m3  AQI ${realtime.air_quality.aqi.usa}
 💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)}  降水 ${realtime.precipitation.local.intensity.toFixed(2)}mm/h
-🌟 ${minutely.description}
-🌡 温度 ${daily.temperature[0].min}-${daily.temperature[0].max}℃  ${mapSkycon(daily.skycon[0].value)}
-[未来2小时降水概率、强度/半小时]
-${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}
-${alertInfo}${dailySkycon}`
+🌡 温度 ${daily.temperature[0].min}-${daily.temperature[0].max}℃  👀 能见度 ${realtime.visibility}km
+💡 ${hourly.description}
+${twoHourProbability}${alertInfo}${dailySkycon}`
   );
 }
-// 👀 能见度 ${realtime.visibility}km
+
 // 🌞 紫外线 ${realtime.life_index.ultraviolet.desc}
 // 湿度 ${(realtime.humidity * 100).toFixed(0)}%
 // 🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature}℃
