@@ -233,16 +233,18 @@ function realtimeWeather() {
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street}`,
     `${mapSkycon(realtime.skycon)} ${realtime.temperature}℃  空气质量 ${realtime.air_quality.description.usa}`,
-    `💨 PM2.5浓度 ${realtime.air_quality.pm25}μg/m3  AQI ${realtime.air_quality.aqi.usa}
-🌡 温度 ${daily.temperature[0].min}-${daily.temperature[0].max}℃  湿度 ${(realtime.humidity * 100).toFixed(0)}%
-👀 能见度 ${realtime.visibility}km  降水 ${realtime.precipitation.local.intensity.toFixed(2)}mm/h
-🌞 紫外线 ${realtime.life_index.ultraviolet.desc} 💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)}
-[未来2小时降水]
-🔱 ${minutely.description}
-概率、强度/半小时 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}
+    `😷 PM2.5浓度 ${realtime.air_quality.pm25}μg/m3  AQI ${realtime.air_quality.aqi.usa}
+💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)}  降水 ${realtime.precipitation.local.intensity.toFixed(2)}mm/h
+🌟 ${minutely.description}
+🌡 温度 ${daily.temperature[0].min}-${daily.temperature[0].max}℃  ${mapSkycon(daily.skycon[0].value)}
+[未来2小时降水概率、强度/半小时]
+${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}
 ${alertInfo}${dailySkycon}`
   );
 }
+// 👀 能见度 ${realtime.visibility}km
+// 🌞 紫外线 ${realtime.life_index.ultraviolet.desc}
+// 湿度 ${(realtime.humidity * 100).toFixed(0)}%
 // 🌡 体感${realtime.life_index.comfort.desc} ${realtime.apparent_temperature}℃
 // 📏 最近的降水带在${ realtime.precipitation.nearest.distance } 公里外呢
 // ${hourlySkycon}
@@ -288,39 +290,39 @@ function mapWind(speed, direction) {
     description = "无风";
     return description;
   } else if (speed <= 5) {
-    description = "1级 微风徐徐";
+    description = "1级"; // 微风徐徐";
   } else if (speed <= 11) {
-    description = "2级 清风";
+    description = "2级"; // 清风";
   } else if (speed <= 19) {
-    description = "3级 树叶摇摆";
+    description = "3级"; // 树叶摇摆";
   } else if (speed <= 28) {
-    description = "4级 树枝摇动";
+    description = "4级"; // 树枝摇动";
   } else if (speed <= 38) {
-    description = "5级 风力强劲";
+    description = "5级"; // 风力强劲";
   } else if (speed <= 49) {
-    description = "6级 风力强劲";
+    description = "6级"; // 风力强劲";
   } else if (speed <= 61) {
-    description = "7级 风力超强";
+    description = "7级"; // 风力超强";
   } else if (speed <= 74) {
-    description = "8级 狂风大作";
+    description = "8级"; // 狂风大作";
   } else if (speed <= 88) {
-    description = "9级 狂风呼啸";
+    description = "9级"; // 狂风呼啸";
   } else if (speed <= 102) {
-    description = "10级 暴风毁树";
+    description = "10级"; // 暴风毁树";
   } else if (speed <= 117) {
-    description = "11级 暴风毁树";
+    description = "11级"; // 暴风毁树";
   } else if (speed <= 133) {
-    description = "12级 飓风";
+    description = "12级"; // 飓风";
   } else if (speed <= 149) {
-    description = "13级 台风";
+    description = "13级"; // 台风";
   } else if (speed <= 166) {
-    description = "14级 强台风";
+    description = "14级"; // 强台风";
   } else if (speed <= 183) {
-    description = "15级 强台风";
+    description = "15级"; // 强台风";
   } else if (speed <= 201) {
-    description = "16级 超强台风";
+    description = "16级"; // 超强台风";
   } else if (speed <= 220) {
-    description = "17级 超强台风";
+    description = "17级"; // 超强台风";
   }
 
   if (direction >= 348.76 || direction <= 11.25) {
