@@ -228,7 +228,7 @@ function realtimeWeather() {
 
   let twoHourProbability = "[未来2小时]\n";
   if (minutely.probability[0] != 0 || minutely.probability[1] != 0 || minutely.probability[2] != 0 || minutely.probability[3] != 0) {
-    twoHourProbability += `降水 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}`;
+    twoHourProbability += `降水概率、强度/半小时 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}`;
   } else {
     for (let i = 1; i < 3; i++) {
       const skycon = hourly.skycon[i];
