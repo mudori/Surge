@@ -235,19 +235,18 @@ function realtimeWeather() {
     twoHourProbability += `降水 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}`;
   } else {
     twoHourProbability += `${mapSkycon(hourly.skycon[1].value)}  ${hourly.temperature[1].value}℃  ${mapWind(hourly.wind[1].speed, hourly.wind[1].direction)}
-${mapSkycon(hourly.skycon[2].value)}  ${hourly.temperature[2].value}℃  ${mapWind(hourly.wind[2].speed, hourly.wind[2].direction)}
-降水 ${(minutely.probability[0] * 100).toFixed(0)}% -${minutely.precipitation_2h[29].toFixed(2)}, ${(minutely.probability[1] * 100).toFixed(0)}% -${minutely.precipitation_2h[59].toFixed(2)}, ${(minutely.probability[2] * 100).toFixed(0)}% -${minutely.precipitation_2h[89].toFixed(2)}, ${(minutely.probability[3] * 100).toFixed(0)}% -${minutely.precipitation_2h[119].toFixed(2)} `;
+${mapSkycon(hourly.skycon[2].value)}  ${hourly.temperature[2].value}℃  ${mapWind(hourly.wind[2].speed, hourly.wind[2].direction)}`;
   }
 
   $.notify(
     `[彩云天气] ${address.city} ${address.district} ${address.street} `,
     `${mapSkycon(realtime.skycon)} ${realtime.temperature} ℃  空气质量 ${realtime.air_quality.description.usa} `,
     `😷 PM2.5浓度 ${realtime.air_quality.pm25} μg / m3  AQI ${realtime.air_quality.aqi.usa}
-    💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)} 降水 ${realtime.precipitation.local.intensity.toFixed(2)} mm / h
-    🌡 温度 ${daily.temperature[0].min} -${daily.temperature[0].max} ℃  👀 能见度 ${realtime.visibility} km
-    💡 ${hourly.description}
-    ${twoHourProbability}
-    ${alertInfo} ${dailySkycon} `
+💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)} 降水 ${realtime.precipitation.local.intensity.toFixed(2)} mm / h
+🌡 温度 ${daily.temperature[0].min} -${daily.temperature[0].max} ℃  👀 能见度 ${realtime.visibility} km
+💡 ${hourly.description}
+${twoHourProbability}
+${alertInfo}${dailySkycon}`
   );
 }
 
@@ -367,7 +366,7 @@ function mapWind(speed, direction) {
     d_description = "北西北";
   }
 
-  return `${d_description} 风 ${description} `;
+  return `${d_description}风 ${description}`;
 }
 
 // 天气状况 --> 自然语言描述
