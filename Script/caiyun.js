@@ -237,8 +237,7 @@ function realtimeWeather() {
       const dt = new Date(skycon.datetime);
       dt.setHours(dt.getHours());
       twoHourProbability +=
-        `${dt.getHours()}时 ${mapSkycon(skycon.value)} ${temperature.value}℃  ${mapWind(wind.speed, wind.direction)}` +
-        (i == 1 ? "" : "\n");
+        `${dt.getHours()}时 ${mapSkycon(skycon.value)} ${temperature.value}℃  ${mapWind(wind.speed, wind.direction)}`
     }
   }
 
