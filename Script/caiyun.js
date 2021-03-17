@@ -226,7 +226,7 @@ function realtimeWeather() {
     const dt = new Date(temperature.date);
     const day = dt.toLocaleDateString();
     dailySkycon +=
-      `${day} ${mapSkycon(skycon.value)} ${temperature.min}℃ - ${temperature.max}℃` +
+      `${day} ${mapSkycon(skycon.value)} ${temperature.min}-${temperature.max}℃` +
       (i == 2 ? "" : "\n");
   }
 
