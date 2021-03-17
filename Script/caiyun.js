@@ -205,7 +205,7 @@ function realtimeWeather() {
   const minutely = data.minutely;
   const hourly = data.hourly;
   const daily = data.daily;
-  const keypoint = data.forecast_keypoint;
+  // const keypoint = data.forecast_keypoint;
 
   // let hourlySkycon = "[未来4小时]\n";
   // for (let i = 0; i < 4; i++) {
@@ -230,12 +230,12 @@ function realtimeWeather() {
       (i == 2 ? "" : "\n");
   }
 
-  let twoHourProbability = "";
+  let twoHourProbability = "[未来2小时]\n";
   if (minutely.probability[0] != 0 || minutely.probability[1] != 0 || minutely.probability[2] != 0 || minutely.probability[3] != 0) {
-    twoHourProbability = `[未来2小时降水概率、强度/半小时]
-    ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}`;
+    twoHourProbability = `降水 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}`;
   } else {
-    twoHourProbability = `📎 ${keypoint}`;
+    twoHourProbability = `${mapSkycon(hourly.skycon[1].value)} ${hourly.temperature[1].value}℃ ${mapWind(hourly.wind[1].speed, hourly.wind[1].direction)}
+${mapSkycon(hourly.skycon[2].value)} - ${hourly.temperature[2].value}℃ ${mapWind(hourly.wind[2].speed, hourly.wind[2].direction)}`;
   }
 
   $.notify(
