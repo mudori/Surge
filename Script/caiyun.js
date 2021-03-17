@@ -235,9 +235,7 @@ function realtimeWeather() {
       const temperature = hourly.temperature[i];
       const wind = hourly.wind[i];
       const dt = new Date(skycon.datetime);
-      dt.setHours(dt.getHours());
-      twoHourProbability +=
-        `${dt.getHours()}时 ${mapSkycon(skycon.value)} ${temperature.value}℃  ${mapWind(wind.speed, wind.direction)}`
+      twoHourProbability += `${dt.getHours()}时 ${mapSkycon(skycon.value)} ${temperature.value}℃  ${mapWind(wind.speed, wind.direction)}\n`
     }
   }
 
@@ -248,8 +246,7 @@ function realtimeWeather() {
 💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)}  降水 ${realtime.precipitation.local.intensity.toFixed(2)}mm/h
 🌡 温度 ${daily.temperature[0].min} -${daily.temperature[0].max}℃  能见度 ${realtime.visibility}km
 💡 ${hourly.description}
-${twoHourProbability}
-${alertInfo}${dailySkycon}`
+${twoHourProbability}${alertInfo}${dailySkycon}`
   );
 }
 
