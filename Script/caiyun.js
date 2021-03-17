@@ -239,11 +239,11 @@ ${mapSkycon(hourly.skycon[2].value)}  ${hourly.temperature[2].value}℃  ${mapWi
   }
 
   $.notify(
-    `[彩云天气] ${address.city} ${address.district} ${address.street} `,
-    `${mapSkycon(realtime.skycon)} ${realtime.temperature} ℃  空气质量 ${realtime.air_quality.description.usa} `,
-    `😷 PM2.5浓度 ${realtime.air_quality.pm25} μg / m3  AQI ${realtime.air_quality.aqi.usa}
-💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)} 降水 ${realtime.precipitation.local.intensity.toFixed(2)} mm / h
-🌡 温度 ${daily.temperature[0].min} -${daily.temperature[0].max} ℃  👀 能见度 ${realtime.visibility} km
+    `[彩云天气] ${address.city} ${address.district} ${address.street}`,
+    `${mapSkycon(realtime.skycon)} ${realtime.temperature}℃  空气质量 ${realtime.air_quality.description.usa}`,
+    `😷 PM2.5浓度 ${realtime.air_quality.pm25}μg/m3  AQI ${realtime.air_quality.aqi.usa}
+💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)}  降水 ${realtime.precipitation.local.intensity.toFixed(2)}mm/h
+🌡 温度 ${daily.temperature[0].min}-${daily.temperature[0].max}℃  👀 能见度 ${realtime.visibility}km
 💡 ${hourly.description}
 ${twoHourProbability}
 ${alertInfo}${dailySkycon}`
