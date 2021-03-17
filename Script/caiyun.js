@@ -232,10 +232,10 @@ function realtimeWeather() {
 
   let twoHourProbability = "[未来2小时]\n";
   if (minutely.probability[0] != 0 || minutely.probability[1] != 0 || minutely.probability[2] != 0 || minutely.probability[3] != 0) {
-    twoHourProbability = `降水 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}`;
+    twoHourProbability += `降水 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}`;
   } else {
-    twoHourProbability = `${mapSkycon(hourly.skycon[1].value)} ${hourly.temperature[1].value}℃ ${mapWind(hourly.wind[1].speed, hourly.wind[1].direction)}
-${mapSkycon(hourly.skycon[2].value)} - ${hourly.temperature[2].value}℃ ${mapWind(hourly.wind[2].speed, hourly.wind[2].direction)}`;
+    twoHourProbability += `${mapSkycon(hourly.skycon[1].value)}  ${hourly.temperature[1].value}℃  ${mapWind(hourly.wind[1].speed, hourly.wind[1].direction)}
+${mapSkycon(hourly.skycon[2].value)}  ${hourly.temperature[2].value}℃  ${mapWind(hourly.wind[2].speed, hourly.wind[2].direction)}`;
   }
 
   $.notify(
@@ -245,7 +245,8 @@ ${mapSkycon(hourly.skycon[2].value)} - ${hourly.temperature[2].value}℃ ${mapWi
 💨 ${mapWind(realtime.wind.speed, realtime.wind.direction)}  降水 ${realtime.precipitation.local.intensity.toFixed(2)}mm/h
 🌡 温度 ${daily.temperature[0].min}-${daily.temperature[0].max}℃  👀 能见度 ${realtime.visibility}km
 💡 ${hourly.description}
-${twoHourProbability}${alertInfo}${dailySkycon}`
+${twoHourProbability}
+${alertInfo}${dailySkycon}`
   );
 }
 
