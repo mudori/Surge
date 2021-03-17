@@ -86,8 +86,7 @@ if (typeof $request !== "undefined") {
 async function scheduler() {
   const now = new Date();
   $.log(
-    `Scheduler activated at ${now.getMonth() + 1
-    }月${now.getDate()}日${now.getHours()}时${now.getMinutes()}分`
+    `Scheduler activated at ${now.getMonth() + 1}月${now.getDate()}日${now.getHours()}时${now.getMinutes()}分`
   );
   await query();
   weatherAlert();
@@ -108,9 +107,7 @@ async function query() {
     );
   }
   // query API
-  const url = `https://api.caiyunapp.com/v2.5/${$.read("token").caiyun}/${$.read("location").longitude
-    },${$.read("location").latitude
-    }/weather?lang=zh_CN&hourlysteps=72&dailysteps=3&alert=true&&unit=metric:v2`;
+  const url = `https://api.caiyunapp.com/v2.5/${$.read("token").caiyun}/${$.read("location").longitude},${$.read("location").latitude}/weather?lang=zh_CN&hourlysteps=72&dailysteps=3&alert=true&&unit=metric:v2`;
 
   $.log("Query weather...");
 
@@ -139,8 +136,7 @@ async function query() {
     await $.wait(Math.random() * 2000);
     $.log("Query location...");
     address = await $.http.get(
-      `https://apis.map.qq.com/ws/geocoder/v1/?key=${$.read("token").tencent
-      }&location=${$.read("location").latitude},${$.read("location").longitude}`
+      `https://apis.map.qq.com/ws/geocoder/v1/?key=${$.read("token").tencent}&location=${$.read("location").latitude},${$.read("location").longitude}`
     )
       .then((resp) => {
         const body = JSON.parse(resp.body);
@@ -234,18 +230,16 @@ function realtimeWeather() {
   if (minutely.probability[0] != 0 || minutely.probability[1] != 0 || minutely.probability[2] != 0 || minutely.probability[3] != 0) {
     twoHourProbability += `降水 ${(minutely.probability[0] * 100).toFixed(0)}%-${minutely.precipitation_2h[29].toFixed(2)},  ${(minutely.probability[1] * 100).toFixed(0)}%-${minutely.precipitation_2h[59].toFixed(2)},  ${(minutely.probability[2] * 100).toFixed(0)}%-${minutely.precipitation_2h[89].toFixed(2)},  ${(minutely.probability[3] * 100).toFixed(0)}%-${minutely.precipitation_2h[119].toFixed(2)}`;
   } else {
-    for (let i = 1; i < 2; i++) {
+    for (let i = 1; i < 3; i++) {
       const skycon = hourly.skycon[i];
       const temperature = hourly.temperature[i];
       const wind = hourly.wind[i];
       const dt = new Date(skycon.datetime);
-      dt.setHours(dt.getHours() + 1);
+      dt.setHours(dt.getHours());
       twoHourProbability +=
         `${dt.getHours()}时 ${mapSkycon(skycon.value)} ${temperature.value}℃  ${mapWind(wind.speed, wind.direction)}` +
         (i == 1 ? "" : "\n");
     }
-    // twoHourProbability += `${mapSkycon(hourly.skycon[1].value)}  ${hourly.temperature[1].value}℃  ${mapWind(hourly.wind[1].speed, hourly.wind[1].direction)}
-    //${ mapSkycon(hourly.skycon[2].value) } ${ hourly.temperature[2].value } ℃  ${ mapWind(hourly.wind[2].speed, hourly.wind[2].direction) } `;
   }
 
   $.notify(
@@ -296,7 +290,7 @@ function mapAlertCode(code) {
   };
 
   const res = code.match(/(\d{2})(\d{2})/);
-  return `${names[res[1]]} ${intensity[res[2]]} `;
+  return `${names[res[1]]} ${intensity[res[2]]}`;
 }
 
 function mapWind(speed, direction) {
@@ -376,7 +370,7 @@ function mapWind(speed, direction) {
     d_description = "北西北";
   }
 
-  return `${d_description} 风 ${description} `;
+  return `${d_description}风 ${description}`;
 }
 
 // 天气状况 --> 自然语言描述
