@@ -7,6 +7,7 @@ DOMAIN,mail.me.com,DIRECT
 DOMAIN,mail.icloud.com.cn,DIRECT
 # Location
 USER-AGENT,locationd*,DIRECT
+USER-AGENT,Weather*,DIRECT
 # Apple Pay
 USER-AGENT,Wallet*,DIRECT
 USER-AGENT,passd*,DIRECT
