@@ -1,6 +1,9 @@
 #!name=京东签到
 #!desc=京东签到脚本
 
+[Rule]
+URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
+
 [Script]
 # 屏蔽"总京豆查询"
 # https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
