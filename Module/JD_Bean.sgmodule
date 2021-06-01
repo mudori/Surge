@@ -47,7 +47,6 @@
 京东秒秒币 = type=cron,cronexp="5 7 * * *",wake-system=1,timeout=200,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_ms.js
 点点券 = type=cron,cronexp="5 0,20 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_necklace.js
 女装盲盒 = type=cron,cronexp="30 1,23 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_nzmh.js
-沸腾之夜 = type=cron,cronexp="55,0 21-23/1 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_party_night.js
 # 东东萌宠 = type=cron,cronexp="10 6-18/6 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_pet.js
 # 京东金融养猪猪 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_pigPet.js
 京东种豆得豆 = type=cron,cronexp="0 7-21/2 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_plantBean.js
@@ -63,10 +62,13 @@
 赚京豆 = type=cron,cronexp="5 0,7,23 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_syj.js
 # 取关京东店铺商品 = type=cron,cronexp="30 1-7/1 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_unsubscribe.js
 家电星推官 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js
-618动物联萌 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_zoo.js
+# 家电星推官好友互助 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg_help.js
+618动物联萌 = type=cron,cronexp="30 0,6-23/2 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_zoo.js
+618动物联萌收集金币 = type=cron,cronexp="0-59/30 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_zooCollect.js
 # 京喜签到 = type=cron,cronexp="2 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jx_sign.js
 # 小米运动 = type=cron,cronexp="10 17 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js
 # 小米运动获取Token = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js
+
 # 京东注销店铺会员卡 = type=cron, cronexp="55 23 * * *", wake-system=1, timeout=620, script-path=https://raw.githubusercontent.com/Shineslee/rules/master/jd/jd_unbind.js
 删除优惠券 = type=cron,cronexp="0 6 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/jiegangwu/jd2/master/jd_delCoupon.js
 取关京东店铺商品 = type=cron,cronexp="0 5 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/jiegangwu/jd2/master/jd_unsubscribe.js
