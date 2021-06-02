@@ -2,6 +2,7 @@
 #!desc=Apple自定义规则
 
 [Rule]
+DOMAIN,api.push.apple.com,DIRECT
 # Mail
 DOMAIN,mail.me.com,DIRECT
 DOMAIN,mail.icloud.com.cn,DIRECT
