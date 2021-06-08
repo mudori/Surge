@@ -39,6 +39,7 @@
 # 宠汪汪偷好友积分与狗粮 = type=cron,cronexp="10 0-21/3 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_joy_steal.js
 跳跳乐瓜分京豆 = type=cron,cronexp="1 0,11,21 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jump.js
 京喜领88元红包 = type=cron,cronexp="4 10 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxlhb.js
+惊喜牧场 = type=cron,cronexp="20 0-23/3 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxmc.js
 # 京喜农场 = type=cron,cronexp="0 9,12,18 * * *",timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxnc.js
 京东快递签到 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_kd.js
 京东直播 = type=cron,cronexp="10-20/5 12 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_live.js
@@ -71,6 +72,8 @@
 618动物联萌收集金币 = type=cron,cronexp="0-59/30 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_zooCollect.js
 # 小米运动 = type=cron,cronexp="10 17 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js
 # 小米运动获取Token = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/xmSports.js
+618动物联萌 = type=cron,cronexp="30 0,6-23/2 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_zoo.js
+618动物联萌收集金币 = type=cron,cronexp="0-59/30 * * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_zooCollect.js
 
 # 京东注销店铺会员卡 = type=cron, cronexp="55 23 * * *", wake-system=1, timeout=620, script-path=https://raw.githubusercontent.com/Shineslee/rules/master/jd/jd_unbind.js
 删除优惠券 = type=cron,cronexp="0 6 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/jiegangwu/jd2/master/jd_delCoupon.js
