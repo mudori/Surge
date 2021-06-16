@@ -70,8 +70,6 @@
 # 家电星推官好友互助 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_xtg_help.js
 618动物联萌 = type=cron,cronexp="30 0,6-23/2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_zoo.js
 618动物联萌收集金币 = type=cron,cronexp="0-59/30 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_zooCollect.js
-618动物联萌 = type=cron,cronexp="30 0,6-23/2 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_zoo.js
-618动物联萌收集金币 = type=cron,cronexp="0-59/30 * * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_zooCollect.js
 
 # 京东注销店铺会员卡 = type=cron, cronexp="55 23 * * *", wake-system=1, timeout=620, script-path=https://raw.githubusercontent.com/Shineslee/rules/master/jd/jd_unbind.js
 删除优惠券 = type=cron,cronexp="0 6 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/jiegangwu/jd2/master/jd_delCoupon.js
