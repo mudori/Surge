@@ -1,11 +1,8 @@
 #!name=彩云天气
 #!desc=需申请个人彩云天气/腾讯地图API token
+#!system=ios
 
 [Rule]
-# DOMAIN,ad.caiyunapp.com,REJECT
-# URL-REGEX,^http:\/\/caiyunapp.com\/\/fcgi-bin\/v1\/subscribe.py,REJECT
-# DOMAIN,applog.uc.cn,REJECT
-# DOMAIN-SUFFIX,mob.com,REJECT
 # 基于地理位置的服务    
 DOMAIN,gs-loc.apple.com,DIRECT
 USER-AGENT,locationd*,DIRECT
