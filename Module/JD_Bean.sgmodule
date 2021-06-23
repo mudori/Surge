@@ -24,7 +24,6 @@
 5G超级盲盒 = type=cron,cronexp="0 0,1-23/3 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_mohe.js
 京东摇钱树 = type=cron,cronexp="0 0-23/2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_moneyTree.js
 京东秒秒币 = type=cron,cronexp="5 7 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_ms.js
-点点券 = type=cron,cronexp="5 0,20 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_necklace.js
 女装盲盒 = type=cron,cronexp="30 1,23 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_nzmh.js
 京东种豆得豆 = type=cron,cronexp="0 7-21/2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_plantBean.js
 京东保价 = type=cron,cronexp="0 2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_price.js
