@@ -7,14 +7,14 @@ QuantumultX 远程脚本配置:
 **********************
 [rewrite_local]
 ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi url script-response-body https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
-[mitm] 
+[mitm]
 hostname= weixin110.qq.com
 **********************
 Surge 4.2.0+ 脚本配置:
 **********************
 [Script]
 tbopener.js = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,script-path=https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
-[MITM] 
+[MITM]
 hostname= weixin110.qq.com
 */
 
