@@ -37,7 +37,5 @@
 删除优惠券 = type=cron,cronexp="0 6 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/jiegangwu/jd2/master/jd_delCoupon.js
 取关京东店铺商品 = type=cron,cronexp="0 5 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/jiegangwu/jd2/master/jd_unsubscribe.js
 
-京享值PK = type=cron,cronexp="10 0,6,13,19,21 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/hyzaw/scripts/main/ddo_pk.js,script-update-interval=0
-
 [MITM]
 hostname = %APPEND% me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com
