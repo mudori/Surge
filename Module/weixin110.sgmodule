@@ -2,11 +2,18 @@
 #!desc=QQ和微信的扫码（支付宝二维码）+ 不能正常打开的url的跳转 + 浏览器UA替换为百度的简单搜索（无广告）
 #!system=ios
 
+[URL Rewrite]
+^https:\/\/oia\.zhihu\.com\/articles\/([0-9]+)\?.* https://zhuanlan.zhihu.com/p/$1 307
+^https:\/\/oia\.zhihu\.com\/answers\/([0-9]+)\?.* https://www.zhihu.com/answer/$1 307
+^https?:\/\/link\.zhihu\.com/\?target=(https?)%3A//(.*) $1://$2 307
+
 [Header Rewrite]
 ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace User-Agent "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SearchCraft/3.7.4 (Baidu; P2 14.0)"
 
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）
 ^https?:\/\/www\.zhihu\.com header-replace User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
+
+# ^https?:\/\/www\.zhihu\.com\/ header-replace User-Agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
 
 [Script]
 #> 微信app屏蔽链接跳转（支持扫支付宝二维码）
@@ -19,5 +26,7 @@ qqaplipay.js= type=http-request,pattern=^https:\/\/qr\.alipay\.com\/[a-zA-Z0-9]{
 # 百度（全站替换为手机百度 Quark 的 User-Agent）
 BaiduChangeUA = type=http-request,pattern=^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/BaiduChangeUA.js
 
+zhihu = type=http-response,pattern=^https:\/\/www\.zhihu\.com\/(question|topic),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/zhihux.user.js,script-update-interval=0
+
 [MITM]
-hostname= %APPEND% qr.alipay.com, baidu.com, mp.weixin.qq.com, weixin110.qq.com, zhihu.com
+hostname= %APPEND% qr.alipay.com, baidu.com, mp.weixin.qq.com, weixin110.qq.com, zhihu.com, oia.zhihu.com, link.zhihu.com, www.zhihu.com
