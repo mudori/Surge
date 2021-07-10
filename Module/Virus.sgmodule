@@ -1,5 +1,5 @@
-#!name=jump, by Barry
-#!desc=QQ和微信的扫码（支付宝二维码）+ 不能正常打开的url的跳转 + 浏览器UA替换为百度的简单搜索（无广告）
+#!name=整治毒瘤
+#!desc=QQ, 微信, 百度, 知乎
 #!system=ios
 
 [URL Rewrite]
