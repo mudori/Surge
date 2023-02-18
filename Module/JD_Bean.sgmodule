@@ -1,0 +1,15 @@
+#!name=京东京豆
+#!desc=京东类脚本
+#!system=ios
+
+[Script]
+获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+# 京东资产变动通知 = type=cron,cronexp="0 7 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_bean_change.js
+# 京东赚赚 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_jdzz.js
+# 京东极速版 = type=cron,cronexp="0 6 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_speed_sign.js
+京东保价 = type=cron,cronexp="0 8 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/jd_price.js
+# 删除优惠券 = type=cron,cronexp="0 7 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/others/jd_delCoupon.js
+# 取关京东店铺商品 = type=cron,cronexp="0 5 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mudori/Surge/master/Script/jd_scripts/others/jd_unsubscribe.js
+
+[MITM]
+hostname = %APPEND% me-api.jd.com, draw.jdfcloud.com, api.m.jd.com

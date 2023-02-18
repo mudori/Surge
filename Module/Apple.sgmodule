@@ -1,0 +1,78 @@
+#!name=Apple
+#!desc=Apple自定义规则
+
+[Rule]
+DOMAIN,*.push.apple.com,DIRECT
+# Mail
+DOMAIN,mail.me.com,DIRECT
+DOMAIN,mail.icloud.com.cn,DIRECT
+# Location
+USER-AGENT,geod*,DIRECT
+USER-AGENT,locationd*,DIRECT
+USER-AGENT,Weather*,DIRECT
+# Apple Pay
+USER-AGENT,Wallet*,DIRECT
+USER-AGENT,passd*,DIRECT
+USER-AGENT,seld*,DIRECT
+USER-AGENT,nfcd*,DIRECT
+USER-AGENT,PassbookUIService*,DIRECT
+DOMAIN,nc-pod5-smp-device.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-sh-pod1.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-sh-pod2.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-sh-pod3.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-tj-pod1.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-tj-pod2.apple.com,DIRECT
+DOMAIN,cn-apple-pay-gateway-tj-pod3.apple.com,DIRECT
+DOMAIN,gs-loc-cn.apple.com,DIRECT
+DOMAIN,cn-smp-paymentservices.apple.com,DIRECT
+# 拒绝Apple OCSP服务
+DOMAIN,ocsp.apple.com,REJECT-DROP
+# PROCESS-NAME,trustd,REJECT-DROP
+# USER-AGENT,com.apple.trustd,REJECT-DROP
+# 屏蔽iOS更新
+# DOMAIN,mesu.apple.com,REJECT-DROP
+# DOMAIN,gdmf.apple.com,REJECT-DROP
+# DOMAIN,updates-http.cdn-apple.com,REJECT-DROP
+# DOMAIN,xp.apple.com,REJECT-DROP
+# 屏蔽macOS更新
+# PROCESS-NAME,softwareupdated,REJECT-DROP
+# PROCESS-NAME,SoftwareUpdateNotificationManager,REJECT-DROP
+DOMAIN,gnf-mdn.apple.com,REJECT-DROP
+DOMAIN,gnf-mr.apple.com,REJECT-DROP
+DOMAIN,gs.apple.com,REJECT-DROP
+DOMAIN,ig.apple.com,REJECT-DROP
+DOMAIN,skl.apple.com,REJECT-DROP
+DOMAIN,swcdn.apple.com,REJECT-DROP
+DOMAIN,swdist.apple.com,REJECT-DROP
+DOMAIN,swdownload.apple.com,REJECT-DROP
+DOMAIN,swpost.apple.com,REJECT-DROP
+DOMAIN,swscan.apple.com,REJECT-DROP
+# 校时服务UDP
+DOMAIN,time.apple.com,DIRECT
+DOMAIN,time-ios.apple.com,DIRECT
+DOMAIN,time-macos.apple.com,DIRECT
+# 屏蔽Apple Ads
+DOMAIN,metrics.apple.com,REJECT-DROP
+DOMAIN,advertising.apple.com,REJECT-DROP
+DOMAIN,banners.itunes.apple.com,REJECT-DROP
+DOMAIN,ca.iadsdk.apple.com,REJECT-DROP
+DOMAIN,cf.iadsdk.apple.com,REJECT-DROP
+DOMAIN,cs.iadsdk.apple.com,REJECT-DROP
+DOMAIN,iadmoo.apple.com,REJECT-DROP
+DOMAIN,su.iadsdk.apple.com,REJECT-DROP
+DOMAIN,tr.iadsdk.apple.com,REJECT-DROP
+DOMAIN,ut.iadsdk.apple.com,REJECT-DROP
+DOMAIN,securemetrics.apple.com,REJECT-DROP
+DOMAIN,iadcontent.apple.com,REJECT-DROP
+DOMAIN,news.iadsdk.apple.com,REJECT-DROP
+DOMAIN,iadsdk.apple.com,REJECT-DROP
+DOMAIN,apple.comscoreresearch.com,REJECT-DROP
+# 系统服务
+RULE-SET,SYSTEM,PROXY
+# Apple常用域名
+RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Apple.list,PROXY
+
+[Script]
+
+[MITM]
