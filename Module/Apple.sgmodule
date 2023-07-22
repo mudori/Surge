@@ -27,7 +27,7 @@ DOMAIN,cn-apple-pay-gateway-tj-pod3.apple.com,DIRECT
 DOMAIN,gs-loc-cn.apple.com,DIRECT
 DOMAIN,cn-smp-paymentservices.apple.com,DIRECT
 # 拒绝Apple OCSP服务
-DOMAIN,ocsp.apple.com,REJECT-DROP
+# DOMAIN,ocsp.apple.com,REJECT-DROP
 # PROCESS-NAME,trustd,REJECT-DROP
 # USER-AGENT,com.apple.trustd,REJECT-DROP
 # 屏蔽iOS更新
