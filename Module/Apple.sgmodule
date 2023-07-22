@@ -69,7 +69,7 @@ DOMAIN,news.iadsdk.apple.com,REJECT-DROP
 DOMAIN,iadsdk.apple.com,REJECT-DROP
 DOMAIN,apple.comscoreresearch.com,REJECT-DROP
 # 系统服务
-RULE-SET,SYSTEM,PROXY
+RULE-SET,SYSTEM,DIRECT
 # Apple常用域名
 RULE-SET,https://raw.githubusercontent.com/mudori/Surge/master/Ruleset/Apple.list,PROXY
 
